@@ -1,0 +1,11 @@
+# first line must not contain any rules
+sales/frontend/node_modules/*
+/sales/frontend/node_modules/*
+shop/frontend/node_modules/*
+/shop/frontend/node_modules/*
+*.pyc
+settings.py
+settings.pyc
+*.log
+!.gitignore
+

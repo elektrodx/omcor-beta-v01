@@ -1,0 +1,6 @@
+{
+	"name": "omcor",
+	"scripts": {
+		"stylus": "stylus -u nib -c -w -o ../static/css/ stylus/home.styl"
+	}
+}
