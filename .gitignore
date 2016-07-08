@@ -7,5 +7,6 @@ shop/frontend/node_modules/*
 settings.py
 settings.pyc
 *.log
+sqlite3.db
 !.gitignore
 
