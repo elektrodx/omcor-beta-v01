@@ -15,6 +15,8 @@ class Order(models.Model):
 	status = models.ForeignKey(Status)
 	amount_total = models.DecimalField(max_digits=6, decimal_places=2)
 	weight = models.DecimalField(max_digits=6, decimal_places=2)
+	def __unicode__(self):
+		return str(self.pk)
 
 class OrderDetail(models.Model):
 	order = models.ForeignKey(Order)
@@ -27,6 +29,7 @@ class OrderLog(models.Model):
 	date = models.DateTimeField(auto_now_add=True)
 	event = models.CharField(max_length=255)
 	reference = models.CharField(max_length=255)
+	document = models.ImageField(upload_to="media/order-log", blank=True)
 	note = models.TextField(blank=True, null=True)
 
 class OrderPayments(models.Model):
@@ -35,4 +38,5 @@ class OrderPayments(models.Model):
 	amount = models.DecimalField(max_digits=6, decimal_places=2)
 	concept = models.CharField(max_length=255)
 	consignee = models.CharField(max_length=255)
+	document = models.ImageField(upload_to="media/order-payment", blank=True)
 
