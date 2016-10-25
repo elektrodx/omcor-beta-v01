@@ -3,10 +3,37 @@
 <head>
 	<meta charset="UTF-8">
 	{% load static from staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static "css/home.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "css/f.css" %}">
 	<title>Omcor System</title>
 </head>
 <body>
-	<p>Omcor system</p>
+	<div class="fixed">
+		<div class="top-bar">
+		  <div class="top-bar-left">
+		    <ul class="dropdown menu" data-dropdown-menu>
+		      <li class="menu-text">TeloCompro</li>
+		      <li class="is-dropdown-submenu-parent">
+		        <a href="#">Pedidos</a>
+		        <ul class="menu submenu is-dropdown-submenu first-sub vertical">
+		          <li class="is-submenu-item is-dropdown-submenu-item"><a href="#">Pendientes</a></li>
+		          <li class="is-submenu-item is-dropdown-submenu-item"><a href="#">Sin rastreo</a></li>
+		          <li class="is-submenu-item is-dropdown-submenu-item"><a href="#">En Bolivia</a></li>
+		        </ul>
+		      </li>
+		      <li><a href="#">Cuentas</a></li>
+		      <li><a href="#">Reportes</a></li>
+		    </ul>
+		  </div>
+</div>
+	</div>
+	<footer class="callout secondary large text-center">
+		<h6>Av. Ayacucho N 344 Oficina 503 Telefono 4528235 70709045 coral@omcor.us</h6>
+		<h6 class="copyright text-center"><small><a href="#">    (c) 2016 ElektroDX Omcor Trading</a></small></h6>
+	</footer>
 </body>
+<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/foundation.min.js" %}"></script>
+<script>
+        $(document).foundation();
+    </script>
 </html>
